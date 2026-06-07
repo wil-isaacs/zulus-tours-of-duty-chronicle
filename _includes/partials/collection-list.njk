@@ -1,0 +1,9 @@
+{% if records.length %}
+  <div class="record-grid">
+    {% for record in records %}
+      {% include "partials/record-card.njk" %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p>{{ emptyMessage }}</p>
+{% endif %}

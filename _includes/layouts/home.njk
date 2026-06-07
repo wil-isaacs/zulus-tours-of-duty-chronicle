@@ -1,0 +1,18 @@
+---
+layout: layouts/default.njk
+---
+
+<section class="hero-panel">
+  {{ content | safe }}
+</section>
+
+<section class="latest-grid" aria-labelledby="latest-files">
+  <h2 id="latest-files">Latest filed records</h2>
+  <div class="record-grid">
+    {% for record in collections.latestRecords %}
+      {% include "partials/record-card.njk" %}
+    {% else %}
+      <p>No records have been filed yet.</p>
+    {% endfor %}
+  </div>
+</section>

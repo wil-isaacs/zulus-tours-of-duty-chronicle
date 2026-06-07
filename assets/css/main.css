@@ -1,0 +1,248 @@
+:root {
+  color-scheme: dark;
+  --bg: #111315;
+  --panel: #1a1d20;
+  --panel-strong: #22272b;
+  --text: #ece8dc;
+  --muted: #b8ad9d;
+  --accent: #d7a84f;
+  --line: #3b3327;
+  --danger: #9b4038;
+  --max-width: 1120px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(155, 64, 56, 0.18), transparent 26rem),
+    linear-gradient(135deg, #111315 0%, #181511 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 1.25rem;
+}
+
+.site-header {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.site-title {
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--accent);
+}
+
+.site-main {
+  padding-bottom: 3rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: var(--panel-strong);
+}
+
+.hero-panel,
+.page,
+.dossier,
+.latest-grid {
+  background: rgba(26, 29, 32, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
+  margin-top: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.25rem;
+  margin-top: -0.8rem;
+}
+
+.record-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.record-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--danger);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.record-card h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.record-card dl,
+.dossier-meta dl {
+  display: grid;
+  gap: 0.25rem 0.75rem;
+  grid-template-columns: max-content 1fr;
+}
+
+.record-card dt,
+.dossier-meta dt {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.record-card dd,
+.dossier-meta dd {
+  margin: 0;
+}
+
+.dossier-header {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.dossier-shell {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+}
+
+.dossier-meta {
+  align-self: start;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.dossier-meta figure {
+  margin: 0 0 1rem;
+}
+
+.dossier-meta figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.image-placeholder {
+  align-items: center;
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(135deg, rgba(215, 168, 79, 0.08), transparent),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(236, 232, 220, 0.04),
+      rgba(236, 232, 220, 0.04) 0.5rem,
+      transparent 0.5rem,
+      transparent 1rem
+    );
+  border: 1px dashed var(--line);
+  border-radius: 0.5rem;
+  color: var(--muted);
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: 800;
+  justify-content: center;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  min-height: 14rem;
+  text-transform: uppercase;
+}
+
+.xref-list {
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .dossier-shell {
+    display: block;
+  }
+
+  .site-nav {
+    margin-top: 1rem;
+  }
+}
