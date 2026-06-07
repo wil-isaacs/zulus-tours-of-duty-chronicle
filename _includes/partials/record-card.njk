@@ -1,4 +1,4 @@
-<article class="record-card">
+<div class="record-card">
   <p class="eyebrow">{{ record.data.categoryLabel or record.data.collectionLabel or "Record" }}</p>
   <h2><a href="{{ record.url | url }}">{{ record.data.title }}</a></h2>
   {% if record.data.subtitle %}
@@ -12,4 +12,4 @@
     {% if record.data.registerName %}<dt>Register</dt><dd>{{ record.data.registerName }}</dd>{% endif %}
     {% if record.data.status %}<dt>Status</dt><dd>{{ record.data.status }}</dd>{% endif %}
   </dl>
-</article>
+</div>
