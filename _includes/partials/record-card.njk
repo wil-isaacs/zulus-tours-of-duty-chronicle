@@ -1,0 +1,15 @@
+<article class="record-card">
+  <p class="eyebrow">{{ record.data.categoryLabel or record.data.collectionLabel or "Record" }}</p>
+  <h2><a href="{{ record.url | url }}">{{ record.data.title }}</a></h2>
+  {% if record.data.subtitle %}
+    <p>{{ record.data.subtitle }}</p>
+  {% elif record.data.summary %}
+    <p>{{ record.data.summary }}</p>
+  {% endif %}
+  <dl>
+    {% if record.data.player %}<dt>Player</dt><dd>{{ record.data.player }}</dd>{% endif %}
+    {% if record.data.affiliation %}<dt>Affiliation</dt><dd>{{ record.data.affiliation }}</dd>{% endif %}
+    {% if record.data.registerName %}<dt>Register</dt><dd>{{ record.data.registerName }}</dd>{% endif %}
+    {% if record.data.status %}<dt>Status</dt><dd>{{ record.data.status }}</dd>{% endif %}
+  </dl>
+</article>

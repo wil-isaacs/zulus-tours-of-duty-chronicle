@@ -1,0 +1,13 @@
+{
+  "name": "zulus-tours-of-duty-chronicle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static chronicle site for the Zulu's Board Game Cafe Tours of Duty league.",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

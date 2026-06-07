@@ -1,0 +1,51 @@
+---
+layout: layouts/default.njk
+---
+
+<article class="dossier">
+  <header class="dossier-header">
+    <p class="eyebrow">{{ categoryLabel }}</p>
+    <h1>{{ title }}</h1>
+    {% if subtitle %}
+      <p class="subtitle">{{ subtitle }}</p>
+    {% endif %}
+  </header>
+
+  <div class="dossier-shell">
+    <aside class="dossier-meta" aria-label="Record metadata">
+      {% if image %}
+        <figure>
+          <img src="{{ image | url }}" alt="{{ imageAlt or title }}">
+          {% if imageCaption %}
+            <figcaption>{{ imageCaption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% else %}
+        <div class="image-placeholder" role="img" aria-label="Image pending for {{ title }}">
+          <span>Image pending</span>
+        </div>
+      {% endif %}
+
+      <dl>
+        {% if player %}<dt>Player</dt><dd>{{ player }}</dd>{% endif %}
+        {% if affiliation %}<dt>Affiliation</dt><dd>{{ affiliation }}</dd>{% endif %}
+        {% if registerName %}<dt>Register</dt><dd>{{ registerName }}</dd>{% endif %}
+        {% if status %}<dt>Status</dt><dd>{{ status }}</dd>{% endif %}
+        {% if date %}<dt>Filed</dt><dd>{{ date | readableDate }}</dd>{% endif %}
+      </dl>
+
+      {% if links %}
+        <h2>Cross references</h2>
+        <ul class="xref-list">
+          {% for link in links %}
+            <li><a href="{{ link.url | url }}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </aside>
+
+    <div class="dossier-body">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
