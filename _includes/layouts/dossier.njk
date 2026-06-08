@@ -29,7 +29,16 @@ layout: layouts/default.njk
       <dl>
         {% if player %}<dt>Player</dt><dd>{{ player }}</dd>{% endif %}
         {% if affiliation %}<dt>Affiliation</dt><dd>{{ affiliation }}</dd>{% endif %}
-        {% if registerName %}<dt>Register</dt><dd>{{ registerName }}</dd>{% endif %}
+        {% if registerName %}
+          <dt>Register</dt>
+          <dd>
+            {% if registerUrl %}
+              <a href="{{ registerUrl | url }}">{{ registerName }}</a>
+            {% else %}
+              {{ registerName }}
+            {% endif %}
+          </dd>
+        {% endif %}
         {% if status %}<dt>Status</dt><dd>{{ status }}</dd>{% endif %}
         {% if date %}<dt>Filed</dt><dd>{{ date | readableDate }}</dd>{% endif %}
       </dl>

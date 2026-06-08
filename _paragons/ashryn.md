@@ -3,6 +3,7 @@ title: "Ashryn Vorexis"
 player: "Goobermancer"
 affiliation: "Grand Army of the Republic"
 registerName: "Order 65"
+registerUrl: "/registers/order-65/"
 status: "Active"
 # Add image fields only when an original image is ready.
 # image: "/assets/images/paragons/paragon-name.jpg"

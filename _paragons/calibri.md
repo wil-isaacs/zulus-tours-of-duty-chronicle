@@ -2,7 +2,8 @@
 title: "Calibri"
 player: "Hailstar"
 affiliation: "Confederacy of Independent Systems"
-registerName: "Register TBD"
+registerName: "Mechis Corsair Fleet"
+registerUrl: "/registers/mechis-corsair-fleet/"
 status: "Active"
 ---
 

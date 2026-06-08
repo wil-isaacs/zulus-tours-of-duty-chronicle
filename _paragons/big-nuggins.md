@@ -3,6 +3,7 @@ title: "Zyx 'Big Nuggins' Orlae"
 player: "jasperzig"
 affiliation: "Rebels"
 registerName: "Terries, LLC."
+registerUrl: "/registers/terries-llc/"
 status: "Active"
 # Add image fields only when an original image is ready.
 # image: "/assets/images/paragons/paragon-name.jpg"

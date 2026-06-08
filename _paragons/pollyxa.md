@@ -2,7 +2,8 @@
 title: "Cpt. Pollyxa Anakes"
 player: "Balekzander"
 affiliation: "Empire"
-registerName: "TBD"
+registerName: "553rd Expeditionary Force 'Dioscuri'"
+registerUrl: "/registers/553rd-expeditionary-force-dioscuri/"
 status: "Active"
 # Add image fields only when an original image is ready.
 # image: "/assets/images/paragons/paragon-name.jpg"

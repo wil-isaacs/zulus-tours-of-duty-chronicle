@@ -2,7 +2,8 @@
 title: "Lieutenant Caelen Voss"
 player: "Frankoi"
 affiliation: "Empire"
-registerName: "TBD"
+registerName: "The Stranded"
+registerUrl: "/registers/the-stranded/"
 status: "Active"
 # Add image fields only when an original image is ready.
 # image: "/assets/images/paragons/paragon-name.jpg"

@@ -9,7 +9,16 @@
   <dl>
     {% if record.data.player %}<dt>Player</dt><dd>{{ record.data.player }}</dd>{% endif %}
     {% if record.data.affiliation %}<dt>Affiliation</dt><dd>{{ record.data.affiliation }}</dd>{% endif %}
-    {% if record.data.registerName %}<dt>Register</dt><dd>{{ record.data.registerName }}</dd>{% endif %}
+    {% if record.data.registerName %}
+      <dt>Register</dt>
+      <dd>
+        {% if record.data.registerUrl %}
+          <a href="{{ record.data.registerUrl | url }}">{{ record.data.registerName }}</a>
+        {% else %}
+          {{ record.data.registerName }}
+        {% endif %}
+      </dd>
+    {% endif %}
     {% if record.data.status %}<dt>Status</dt><dd>{{ record.data.status }}</dd>{% endif %}
   </dl>
 </div>
